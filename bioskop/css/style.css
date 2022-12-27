@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+.col-1{
+    width:8.33%;
+}
+
+.col-2{
+    width: 16.66%;
+}
+
+.col-3{
+    width: 25%;
+}
+
+.col-4{
+    width: 33.33%;
+}
+
+.col-5{
+    width: 41.665%;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: 58.33%;
+}
+
+.col-9{
+    width: 66.66%;
+}
+
+.col-10{
+    width: 83.33%;
+}
+
+.col-11{
+    width: 91.66%;
+}
+
+.col-12{
+    width: 100%;
+}
+
+[class*="col-"]
+{
+    float:left;
+    padding: 10px;
+}
+
+.row::after{
+    content: "";
+    clear:both;
+    display:block;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background: red;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 28px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.active,a:hover{
+    background: black;
+    transition: .5s;
+}
+a:link{
+    color: white;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check{
+    display: none;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+#hero-section{
+    height: 100vh;
+    display: block;
+    position: relative;
+    
+  }
+
+#hero-section::after {
+    content: "";
+    background: url(../img/1.jpg);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center; 
+  }
+
+.heroh1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    padding-top: 250px;
+    color: white;
+}
+
+.heroh2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 90px;
+    color: white;
+    
+}
+.imeFilma{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.nazivSekcije{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+#container{
+    padding-bottom: 45px;
+}
+.box{
+    width: 20%;
+    height: 450px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: red;
+    color: white;
+    text-align: center;
+    
+}
+.box img{
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.box img:hover{
+    transform: scale(1.08);
+}
+
+.box1{
+    width:90%;
+    height: 320px;
+    box-sizing: border-box;
+}
+.box2{
+    width: 30%;
+    height: 450px;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    
+}
+.columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+.column{
+    flex: 1;
+    margin: 2px;
+    padding: 10px;
+    color: white;
+}
+.column h1{
+    color: red;
+}
+.form{
+    color: white;
+    font-size: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    border: solid 3px red;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+.rezervacija{
+    color: white;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tenetJpg{
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1150px){
+    .columns .column{
+        margin-bottom: 5px;
+        flex-basis: 40%;
+    }
+    .columns .column:last-child{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .columns .column:nth-last-child(2){
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .columns .column{
+        margin-bottom: 5px;
+        flex-basis: 35%;
+    }
+    .columns .column:last-child{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .columns .column:nth-last-child(2){
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .columns .column{
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+
+
+}
+.btnProjekcija{
+    position: relative;
+    margin: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background: black;
+    padding: 5px;
+    width: 50%;
+}
+a:visited{
+    color: white;
+}
+
+.imbd{
+    position: relative;
+    float: right;
+    border-radius: 25px;
+    background: black;
+    margin-top: -45px;
+    margin-right: 15px;
+    padding: 5px;
+}
+.fas.fa-star{
+    color: yellow;
+}
+
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+    color: white;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:white;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+    color: white;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: red;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #ec4646;
+	color:#fff;
+}
+.content-section .social{
+	margin: 40px 40px;
+}
+.content-section .social i{
+	color:red;
+	font-size: 30px;
+	padding:0px 10px;
+}
+.content-section .social i:hover{
+	color:#ec4646;
+}
+
+@media screen and (max-width: 1089px){
+    #container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+    padding-top: 20px;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
+}
+
+}
+
+.projekcije{
+    color: white;
+}
+
+#prikazP{
+    margin-top: 120px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 220px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .box{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .box{
+        width:55%;
+    }
+    .rezervacija{
+        font-size: 40px;
+    }
+    .form{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .box{
+        width:60%;
+    }
+    .rezervacija{
+        font-size: 35px;
+    }
+    .form{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 410px){
+    .rezervacija{
+        font-size: 30px;
+    }
+    .form{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }   
+}
+@media (max-width: 878px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 3;
+        top: 80px;
+        bottom: 0;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .heroh2{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 630px){
+    .heroh1{
+        font-size: 40px;
+    }
+    .heroh2{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 530px){
+    .heroh1{
+        font-size: 20px;
+    }
+    .heroh2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 360px){
+    label.logo{
+        color: white;
+        font-size: 23px;
+        line-height: 80px;
+    }
+    .heroh1{
+        font-size: 20px;
+    }
+    .heroh2{
+        font-size: 30px;
+    }
+}
+
+.footer{
+    margin-top: 50px;
+    padding: 40px 0;
+    background-color: red;
+}
+.footer .social{
+    text-align: center;
+    color: white;
+}
+.footer .social a{
+    font-size: 20px;
+    color: white;
+    border: 1px solid red;
+    width: 130px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.8;
+}
+.footer .social a:hover{
+    opacity: 0.9;
+}
+.contact{
+    margin-top: 30px;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+.contact .content p{
+    font-weight: 300;
+}
+.containerK{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.containerK .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.containerK .contactInfo .bokK{
+    position: relative;
+    padding: 30px 0;
+    display: flex;
+}
+.containerK .contactInfo .bokK .icon{
+    min-width: 60px;
+    height: 60px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.containerK .contactInfo .bokK .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 300;
+}
+.containerK .contactInfo .bokK .text h3{
+    font-weight: 500;
+    color: red;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: white;
+    color: black;
+}
+.contactForm h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input, textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox  span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: red;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .containerK{
+        flex-direction: column;
+    }
+    .containerK .contactInfo{
+        margin-bottom: 40px;
+    }
+    .containerK .contactInfo, .contactForm{
+        width: 100%;
+    }
+}
+.btn a{
+    color: black;
+    background-color: white;
+}
+.btn a:hover{
+    color: black;
+    background-color: red;
+}
+#prikazP table{
+    width: 500px;
+    margin-bottom: 85px;
+}
+#prikazP th{
+    border: 2px solid red;
+    border-collapse: collapse;
+    margin: auto;
+    width: 60%;
+}
+#prikazP td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    margin: auto;
+    width: 30%;
+}
+#containerS h1{
+    color: white;
+    margin: 30px
+}
+#containerS{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+#containerS img{
+    width: 300px;
+    object-fit: cover;
+    object-position: bottom;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+#containerS img:hover{
+    transform: scale(1.20);
+}

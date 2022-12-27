@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Pronašli ste film koji želite, rezervišite ga onlajn putem elektronske forme. Bioskop">
+    <meta keywords="Bioskop, rezervacija, e-mail, mobile, karte, Tanet, John Wick, Black Widow, Scream 5">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="forma.js"></script>
+    <script src="https://kit.fontawesome.com/66d84b5b17.js" crossorigin="anonymous"></script>
+    <title>Bioskop - Rezervacija</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Bioskop</label>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="projekcije.html">Projekcije</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+            </ul>
+        </nav>
+    </header>
+<section>
+    <div class="col-12">
+        <p class="rezervacija">Rezervacija filma</p>
+    </div>
+    <div class="col-12">
+        <div class="form">
+        <table>
+            <form name="MojaForma" action="" method="post">
+                <tr>
+                    <td>
+                        <label for="mail">E-mail adresa: </label>
+                    </td>
+                    <td><input type="email" id="mail" name="mail" placeholder="Unesite e-mail adresu" required> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tel">Mobilni telefon: </label>
+                    </td>
+                    <td>
+                        <input type="tel" id="tel" name="tel" placeholder="Unesite broj mobilnog telefona" pattern="[+](381)(6)[0-9]{1}[/][0-9]{2}[-][0-9]{2}[-][0-9]{3}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="film">Naziv filma: </label>
+                    </td>
+                    <td><select name="film" id="film">
+                        <option value="Tanet" id="TanetF">Tanet</option>
+                        <option value="Bloodhound" id="BloodhoundF">Bloodhound</option>
+                        <option value="Mortal" id="MortalF">Mortal</option>
+                        <option value="Scream 5" id="ScreamF">Scream 5</option>
+                        <option value="John wick" id="JohnF">John wick</option>
+                        <option value="Black Widow" id="BlackF">Black Widow</option>
+                        <option value="Godzila" id="GodzilaF">Godzila</option>
+                    </select> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vreme">Period:  </label>
+                    </td>
+                    <td><input type="radio" id="izborVremena" name="izborVremena" value="12:30h" required> <label for="izborVremena">12:30h</label>
+                        <input type="radio"  id="izborVremena"name="izborVremena" value="15:45h" required> <label for="izborVremena">15:45h</label>
+                        <input type="radio" id="izborVremena" name="izborVremena" value="17:30h" required> <label for="izborVremena">17:30h</label> 
+                        <input type="radio" id="izborVremena" name="izborVremena" value="20:45h" required> <label for="izborVremena">20:45h</label> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numb">Broj karata: </label>
+                    </td>
+                    <td><input type="number" id="numb" name="brojKarata" min="1" max="10" value="1" required> </td>
+                </tr>
+                <td></td>
+                <td>
+                <button type="submit" class="btn" onclick="provera(); cuvanje();">
+                    <span class="top content"> Rezerviši bioskop </span>
+                </button>
+                <div>
+                    Tabela sa unosom informacija: <a href="prikaz.html" target="_blank">&#8680;</a>.
+                </div>
+                </td>
+            </tr>
+            </form>
+        </table>
+        </div>
+    </div>
+</section> 
+    
+</body>
+</html>

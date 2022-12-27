@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta descrioption="Prikaz registracije korisnika">
+    <meta keywords="Bioskop, rezervacija, prikaz, karte, film">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="forma.js"></script>
+    <script src="https://kit.fontawesome.com/66d84b5b17.js" crossorigin="anonymous"></script>
+    <title>Bioskop - Prikaz Rezervacije</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Bioskop</label>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="projekcije.html">Projekcije</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="prikazP">
+        <table>
+            <tr>
+              <th>Mejl: </th>
+              <td id="1"></td>
+            </tr>
+            <tr>
+              <th>Mobilni: </th>
+              <td id="2"></td>
+            </tr>
+            <tr>
+              <th>Film: </th>
+              <td id="3"></td>
+            </tr>
+            <tr>
+                <th>Period: </th>
+                <td id="4"></td>
+            </tr>
+            <tr>
+                <th>Broj karata: </th>
+                <td id="5"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="clearStorage()">
+                            <a href="prikaz.html">Brisanje podataka</a>
+                      </button>
+                </td>
+            </tr>
+          </table>
+    </section>
+
+    <section class="footer">
+        <div class="social">
+            <a href="index.html">Početna</a>
+            <a href="onama.html">O nama</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </section>
+
+    <script>
+        let korMail  = localStorage.getItem("mail");
+        let korTel = localStorage.getItem("tel");
+        let korFilm = localStorage.getItem("film");
+        let korIzborVremena = localStorage.getItem("izborVremena");
+        let korKarte = localStorage.getItem("numb");
+  
+        document.getElementById("1").innerHTML = korMail;
+        document.getElementById("2").innerHTML = korTel;
+        document.getElementById("3").innerHTML = korFilm;
+        document.getElementById("4").innerHTML = korIzborVremena;
+        document.getElementById("5").innerHTML = korKarte;
+      </script>
+    
+</body>
+
+</html>
